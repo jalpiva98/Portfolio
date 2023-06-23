@@ -1,0 +1,190 @@
+
+/* universal selector with custum variables*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto;
+    --lightbkg: #fdfffc;
+    --frame:  #FF5757; 
+    --color03: #3c1518;
+    --color04: #82795A;
+    --fontminimal:'Chivo', 'Comfortaa Light'
+
+}
+
+body {
+    background-color: var(--light);
+}
+
+/* This line specifies background color, font types to use and font color, adds a little padding to increase the size of the element */
+
+.header {
+    padding: 20px;
+    font-family: 'Gidole Regular', 'Chivo', 'Comfortaa Light';
+    background-color: var(--frame);
+    color: var(--lightbkg)
+}
+
+/*This line makes it so the element displays 
+in a line but behaving as a block element, whose size and height can be modified  */
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/* element within a class selector that ads style to the div element within the header element*/
+.header div {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gidole Regular', 'Chivo', 'Comfortaa Light';
+    font-size: 20px;
+}
+
+.header div ul {
+    list-style-type: none;
+}
+
+/* This lines makes it so the list appears horizontally */
+
+.header div ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/* this lines gives  font color to the anchor elements within the header*/
+.header a {
+    color: var(--lightbkg );
+    text-decoration: none;
+}
+
+/* this lines gives a default font size, display and padding to all p elements*/
+p {
+    font-size: 16px;
+    display: inline-flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* this gives style to the image that separates the content from the navigation bar */
+
+.spacer {
+    height:300px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/Portada.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* this turns the content class into a flexbox */
+.content {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    float: left;
+}
+
+/* this turns the sections class into a flexbox, it makes sure it will take the whole elemnt's widht */
+
+.sections {
+    display:flex; 
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 50px;
+    font-family: 'Gidole Regular', 'Chivo', 'Comfortaa Light';
+    background-color: var(--lightbkg);
+    color: var(--color03);
+}
+
+/* This creates the titles displayed left side of the page */
+
+.titles{
+    font-size: 36px;
+    width: 25%; 
+    height:    100%;
+    padding-left: 50px;
+}
+
+
+/* This creates yet another flexbox that will contain the main content of each section, 
+the vertical colored line is created here */
+
+.projects{
+    display: flex;
+    width: 75%;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-left: 6px solid var(--color04);
+    height:100%;
+    
+}
+
+/* This adds an underline to each li element and makes it so the list displays horizontally*/
+
+.projects ul {
+    display: inline-block;
+    text-decoration: underline;
+    height:100%;
+    color: var(--color04);
+    
+}
+
+.projects  li {
+    display: inline-block;
+    font-size: 18px;
+    font-weight:bold;
+    margin-left: 25px;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* This creates the containers for the images showcasing the diferent projects of the portfolio*/
+
+.showcase{
+    display: flex ;
+    height: 400px;
+    width: 600px;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    justify-content: center;
+
+}
+
+/* This creates the title cards for the images of each project*/
+.showcase header {
+    text-align: center;
+    padding: 20px;
+    background: var(--frame);
+    color:var(--lightbkg);
+    max-width: 30%;
+    opacity: .5;
+    position: absolute;
+    font-weight:bold;
+
+  }
+
+/* This clips the image to the size of the container*/
+.showcase img {
+    clip-path: (100%)
+}
+
+.cv img {
+    height: 400px;
+    width: 400px;
+}
+
+/* this styles the footer container*/
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Gidole Regular', 'Chivo', 'Comfortaa Light';
+    text-align: center;
+}
+
